@@ -20,8 +20,6 @@ public class PlayerControll : MonoBehaviour
 
     PlayerMov movement;
 
-
-
     public void GetPlanet(string tag)
     {
         if (tag == "arm")

@@ -720,7 +720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 290635479}
   planets:
-  - {fileID: 1270045571636018119, guid: 80ea95fedd34e964096060551df62fae, type: 3}
+  - {fileID: 7631601842148567926, guid: 80ea95fedd34e964096060551df62fae, type: 3}
 --- !u!4 &716535909 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4753491771019854396, guid: 79e7e9fd51053cf47b1c69420d3acbf8,
@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1195944117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57b89da880f7eb8448c21d41aed918ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a0504b1554772947831326c7c12ec48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &1195944120
@@ -1301,7 +1301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 1698336237}
   planets:
-  - {fileID: 1270045571636018119, guid: 80ea95fedd34e964096060551df62fae, type: 3}
+  - {fileID: 7631601842148567926, guid: 80ea95fedd34e964096060551df62fae, type: 3}
 --- !u!1 &1474864801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,7 +1505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 1754672510}
   planets:
-  - {fileID: 1270045571636018119, guid: 80ea95fedd34e964096060551df62fae, type: 3}
+  - {fileID: 7631601842148567926, guid: 80ea95fedd34e964096060551df62fae, type: 3}
 --- !u!1 &1635304538
 GameObject:
   m_ObjectHideFlags: 0
@@ -6815,6 +6815,11 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 0.62
       objectReference: {fileID: 0}
+    - target: {fileID: 4753491771019854399, guid: 79e7e9fd51053cf47b1c69420d3acbf8,
+        type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4753491771019854394, guid: 79e7e9fd51053cf47b1c69420d3acbf8,
         type: 3}
       propertyPath: m_Points.Array.data[0].x
@@ -6887,4 +6892,5 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4753491771019854395, guid: 79e7e9fd51053cf47b1c69420d3acbf8, type: 3}
+    - {fileID: 6817938450964463778, guid: 79e7e9fd51053cf47b1c69420d3acbf8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 79e7e9fd51053cf47b1c69420d3acbf8, type: 3}

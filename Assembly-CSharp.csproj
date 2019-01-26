@@ -61,8 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Destroyer.cs" />
+    <Compile Include="Assets\GameOver.cs" />
     <Compile Include="Assets\GlobalConfig.cs" />
     <Compile Include="Assets\LeftCheck.cs" />
+    <Compile Include="Assets\PlanetCollider.cs" />
     <Compile Include="Assets\PlanetGenerator.cs" />
     <Compile Include="Assets\RightCheck.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />

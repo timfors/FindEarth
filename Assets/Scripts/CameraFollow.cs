@@ -40,6 +40,8 @@ public class CameraFollow : MonoBehaviour
                     StartCoroutine(ChangeLeft());
                     follow = true;
                 }
+
+                yield return new WaitForSeconds(1f);
             }
 
             yield return null;
@@ -58,6 +60,10 @@ public class CameraFollow : MonoBehaviour
         }
 
         follow = false;
+
+        //yield return new WaitForSeconds(1f);
+        gameObject.GetComponentInChildren<SwapField>().ChangeLeftPlatform();
+
         yield return null;
     }
 
@@ -68,11 +74,15 @@ public class CameraFollow : MonoBehaviour
         while (x < 12.5f)
         {
             transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z);
-            x += 0.5f; Debug.Log(x);
+            x += 0.5f;
             yield return new WaitForSeconds(0.001f);
         }
 
         follow = false;
+
+        //yield return new WaitForSeconds(1f);  
+        gameObject.GetComponentInChildren<SwapField>().ChangeRightPlatform();
+
         yield return null;
     }
 }

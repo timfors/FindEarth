@@ -9,5 +9,9 @@ public class Destroyer : MonoBehaviour
     {
         if (!collision.gameObject.tag.Equals("Player"))
             Destroy(collision.gameObject);
+        else
+        {
+
+        }
     }
 }
