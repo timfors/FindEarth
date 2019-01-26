@@ -12,7 +12,8 @@ public class GlobalConfig : MonoBehaviour
 
     public bool start;
     public float speed;
-
+    public bool left;
+    public bool right;
     private void Awake()
     {
         globalConfig = this;

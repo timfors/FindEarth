@@ -22,8 +22,6 @@ public class CameraFollow : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x + (player.position.x > transform.position.x? 0.3f : -0.3f), transform.position.y, transform.position.z);
         }*/
-
-        Debug.Log(Vector3.Distance(new Vector3(player.position.x, 0, 0), new Vector3(transform.position.x, 0, 0)));
     }
 
     IEnumerator CheckPlayer()
@@ -32,12 +30,12 @@ public class CameraFollow : MonoBehaviour
         {
             if (!follow && Vector3.Distance(new Vector3(player.position.x, 0, 0), new Vector3(transform.position.x, 0, 0)) >= 6)
             {
-                if (player.position.x > 0f)
+                if (GlobalConfig.GetGlobalConfig.right)
                 {
                     StartCoroutine(ChangeRight());
                     follow = true;
                 }
-                else if(player.position.x < 0f)
+                else if(GlobalConfig.GetGlobalConfig.left)
                 {
                     StartCoroutine(ChangeLeft());
                     follow = true;

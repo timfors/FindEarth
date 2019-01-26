@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMov : MonoBehaviour
 {
-	public float speed;
 	Vector3 movement;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +14,9 @@ public class PlayerMov : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(movement * speed * Time.deltaTime);
+        if (GlobalConfig.GetGlobalConfig.start)
+        {
+            transform.Translate(movement * GlobalConfig.GetGlobalConfig.speed * Time.deltaTime);
+        }
     }
 }

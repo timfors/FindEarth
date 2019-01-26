@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 8113880455741728757}
   - component: {fileID: 1560673459716188627}
   - component: {fileID: 1270045571636018119}
+  - component: {fileID: 248822546460572218}
   m_Layer: 0
   m_Name: Planet1
   m_TagString: Untagged
@@ -190,6 +191,18 @@ MonoBehaviour:
   obj: {fileID: 8113880455741728755}
   start: 0
   probability: 90
+--- !u!114 &248822546460572218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8113880455741728755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d6061f6a111e3458d25c453d3f3e17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8113880456112517917
 GameObject:
   m_ObjectHideFlags: 0
