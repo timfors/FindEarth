@@ -59,11 +59,17 @@ public class PlanetGenerator : MonoBehaviour
     {
         while (true)
         {
-            if (planetCount < firstNewPlanet)
+            if (planetCount <= 10)
             {
-                obj = Instantiate(planets.Find(p => p is CommonPlanet).obj, parent.transform, false);
-                obj.transform.localPosition = new Vector3(x[Random.Range(0, x.Length)], 3f, 0f);
-
+                FirstStep();
+            }
+            else if (planetCount <= 20)
+            {
+                SecondStep();
+            }
+            else if (planetCount <= 30)
+            {
+                ThirdStep();
             }
             else
             {
@@ -90,5 +96,68 @@ public class PlanetGenerator : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    void FirstStep()
+    {
+        if (planetCount == 10)
+        {
+            obj = Instantiate(planets.Find(p => p is Earth).obj, parent.transform, false);
+            obj.transform.localPosition = new Vector3(x[Random.Range(0, x.Length)], 3f, 0f);
+        }
+        else
+        {
+            obj = Instantiate(planets.Find(p => p is CommonPlanet).obj, parent.transform, false);
+            obj.transform.localPosition = new Vector3(x[Random.Range(0, x.Length)], 3f, 0f);
+        }
+
+        planetCount++;
+    }
+
+    void SecondStep()
+    {
+        if (planetCount == 13 || planetCount == 19)
+        {
+            obj = Instantiate(planets.Find(p => p is Sun).obj, parent.transform, false);
+            obj.transform.localPosition = new Vector3(x[Random.Range(0, x.Length)], 3f, 0f);
+        }
+        else if (planetCount == 15)
+        {
+            /*obj = Instantiate(planets.Find(p => p is Bomb).obj, parent.transform, false);
+            obj.transform.localPosition = new Vector3(x[Random.Range(0, x.Length)], 3f, 0f);*/
+        }
+        else if (planetCount == 20)
+        {
+            obj = Instantiate(planets.Find(p => p is Earth).obj, parent.transform, false);
+            obj.transform.localPosition = new Vector3(x[Random.Range(0, x.Length)], 3f, 0f);
+        }
+        else
+        {
+            obj = Instantiate(planets.Find(p => p is CommonPlanet).obj, parent.transform, false);
+            obj.transform.localPosition = new Vector3(x[Random.Range(0, x.Length)], 3f, 0f);
+        }
+
+        planetCount++;
+    }
+
+    void ThirdStep()
+    {
+        if (planetCount == 22 || planetCount == 26 || planetCount == 29)
+        {
+            obj = Instantiate(planets.Find(p => p is Earth).obj, parent.transform, false);
+            obj.transform.localPosition = new Vector3(x[Random.Range(0, x.Length)], 3f, 0f);
+        }
+        if (planetCount == 25)
+        {
+            obj = Instantiate(planets.Find(p => p is BlackHole).obj, parent.transform, false);
+            obj.transform.localPosition = new Vector3(0f, 3f, 0f);
+        }
+        else
+        {
+            obj = Instantiate(planets.Find(p => p is CommonPlanet).obj, parent.transform, false);
+            obj.transform.localPosition = new Vector3(x[Random.Range(0, x.Length)], 3f, 0f);
+        }
+
+        planetCount++;
     }
 }
