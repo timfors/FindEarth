@@ -10,7 +10,7 @@ public class StartMenu : MonoBehaviour
     GameObject camera;
 
     [SerializeField]
-    Text title;
+    GameObject title;
 
     [SerializeField]
     Text tap;
@@ -27,7 +27,6 @@ public class StartMenu : MonoBehaviour
     public void StartGame()
     {
         StopAllCoroutines();
-        title.color = new Color(1f, 1f, 1f, 0f);
         tap.color = new Color(1f, 1f, 1f, 0f);
         GlobalConfig.GetGlobalConfig.start = true;
     }
@@ -40,15 +39,13 @@ public class StartMenu : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
 
-        while (title.color.a < 1f)
-        {
-            title.color = new Color(title.color.r, title.color.g, title.color.b, title.color.a + 0.01f);
-            yield return new WaitForSeconds(0.001f);
-        }
+        title.SetActive(true);
+
+        yield return new WaitForSeconds(0.5f);
 
         while (tap.color.a < 1f)
         {
-            tap.color = new Color(tap.color.r, tap.color.g, tap.color.b, tap.color.a + 0.01f);
+            tap.color = new Color(tap.color.r, tap.color.g, tap.color.b, tap.color.a + 0.03f);
             yield return new WaitForSeconds(0.001f);
         }
 

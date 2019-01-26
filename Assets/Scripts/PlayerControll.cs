@@ -22,6 +22,7 @@ public class PlayerControll : MonoBehaviour
 
     public void GetPlanet(string tag)
     {
+        GetComponent<Animator>().SetTrigger("idle");
         if (tag == "arm")
         {
             isArm = true;
@@ -42,11 +43,11 @@ public class PlayerControll : MonoBehaviour
         isArm = false;
     }
 
-    // Update is called once per frame
     public void OnClick()
     {
         if (isGrounded)
         {
+            GetComponent<Animator>().SetTrigger("jump");
             transform.parent = oldParent;
             isGrounded = false;
             movement.enabled = true;
