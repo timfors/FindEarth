@@ -10,4 +10,7 @@ public class GameOver : MonoBehaviour
     {
         gameOverManager = this;
     }
+
+    public void StartGameOver()
+    { }
 }

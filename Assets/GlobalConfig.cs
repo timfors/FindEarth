@@ -14,9 +14,34 @@ public class GlobalConfig : MonoBehaviour
     public float speed;
     public bool left;
     public bool right;
+    public int points;
+    public int record;
+
     private void Awake()
     {
         globalConfig = this;
         start = false;
+    }
+
+    private void Start()
+    {
+        if (PlayerPrefs.HasKey("Pints"))
+        {
+            record = PlayerPrefs.GetInt("Points");
+        }
+    }
+
+    public void SetPoints(int points)
+    {
+        this.points += points;
+    }
+
+    public void SetRecord()
+    {
+        if (points > record)
+        {
+            record = points;
+            PlayerPrefs.SetInt("Points", record);
+        }
     }
 }
