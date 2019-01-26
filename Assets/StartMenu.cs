@@ -28,6 +28,7 @@ public class StartMenu : MonoBehaviour
     {
         StopAllCoroutines();
         tap.color = new Color(1f, 1f, 1f, 0f);
+        title.SetActive(false);
         GlobalConfig.GetGlobalConfig.start = true;
     }
 
@@ -41,7 +42,7 @@ public class StartMenu : MonoBehaviour
 
         title.SetActive(true);
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
 
         while (tap.color.a < 1f)
         {

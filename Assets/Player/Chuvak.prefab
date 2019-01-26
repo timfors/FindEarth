@@ -73,7 +73,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659868647371041031}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.13, y: -0.88, z: 0}
+  m_LocalPosition: {x: 2.3183842, y: -1.7093693, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1659868647797131369}
@@ -136,7 +136,7 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1176722875
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 2
   serializedVersion: 2
   m_Quality: 0
@@ -275,7 +275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659868647498305183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1883842, y: 0.82936925, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1659868647840147314}
@@ -308,7 +308,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659868647541587304}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.734616, y: -1.2006307, z: 0}
+  m_LocalPosition: {x: 2.923, y: -2.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1659868647797131369}
@@ -369,7 +369,7 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1176722875
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 4
   serializedVersion: 2
   m_Quality: 0
@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.2965872
+  m_Length: 0.29658726
   m_ChildTransform: {fileID: 1659868647940526402}
   m_AttachedIK: {fileID: 1659868648395842924}
 --- !u!1 &1659868647707541790
@@ -458,7 +458,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659868647707541790}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4160821, y: -1.8723483, z: 0}
+  m_LocalPosition: {x: 2.6044664, y: -2.7017179, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1659868647797131369}
@@ -520,7 +520,7 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1176722875
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 1
   serializedVersion: 2
   m_Quality: 0
@@ -778,7 +778,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659868648147534638}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8090754, y: -1.8914886, z: 0}
+  m_LocalPosition: {x: 1.9974597, y: -2.720858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1659868647797131369}
@@ -840,7 +840,7 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1176722875
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
@@ -919,7 +919,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0, w: 1}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 1.4216157, y: -2.5706308, z: 0}
+    targetPosition: {x: 2.61, y: -3.4, z: 0}
     flip: 1
 --- !u!1 &1659868648404252005
 GameObject:
@@ -945,7 +945,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659868648404252005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1883842, y: 0.82936925, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1659868648862875413}
@@ -1063,7 +1063,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: -0.013107521, w: 0.9999141}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 0.8116158, y: -2.5406306, z: 0}
+    targetPosition: {x: 2, y: -3.37, z: 0}
     flip: 0
 --- !u!1 &1659868648974567252
 GameObject:
@@ -1091,7 +1091,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659868648974567252}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5236158, y: -1.1966307, z: 0}
+  m_LocalPosition: {x: 1.712, y: -2.026, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1659868647797131369}
@@ -1152,7 +1152,7 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1176722875
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 3
   serializedVersion: 2
   m_Quality: 0
