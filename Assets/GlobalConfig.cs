@@ -34,6 +34,7 @@ public class GlobalConfig : MonoBehaviour
     public void SetPoints(int points)
     {
         this.points += points;
+        StartMenu.GetMenu.UpdatePoints();
     }
 
     public void SetRecord()
@@ -43,5 +44,7 @@ public class GlobalConfig : MonoBehaviour
             record = points;
             PlayerPrefs.SetInt("Points", record);
         }
+
+        points = 0;
     }
 }

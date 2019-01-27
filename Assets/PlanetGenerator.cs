@@ -20,22 +20,21 @@ public class PlanetGenerator : MonoBehaviour
     [SerializeField]
     List<Planet> planets;
 
+    public Vector3 parentStartPos;
+
     float[] x = { -1.5f, -1.25f, -1f, -0.75f, -0.5f, -0.25f, 0f, 0.25f, 0.5f, 0.75f, 1f, 1.25f, 1.5f };
     long planetCount;
-    int firstNewPlanet;
     GameObject obj;
 
     private void Awake()
     {
         planetGenerator = this;
         planetCount = 0;
-        firstNewPlanet = 0;
     }
 
     private void Start()
     {
-        List<Planet> pl = planets.FindAll(p => p.GetType() != typeof(CommonPlanet)).OrderBy(p => p.start).ToList();
-        //firstNewPlanet = pl[0].start;
+        parentStartPos = parent.transform.position;
         StartCoroutine(WaitingStart());
     }
 
@@ -55,11 +54,32 @@ public class PlanetGenerator : MonoBehaviour
         }
     }
 
+    public void Clear()
+    {
+        planetCount = 0;
+
+        foreach (Transform obj in parent.transform)
+        {
+            if (obj.GetComponent<PlanetGenerator>() == null && !obj.Equals(parent))
+            {
+                Destroy(obj.gameObject);
+            }
+        }
+
+        StartCoroutine(WaitingStart());
+    }
+
     IEnumerator Generate()
     {
         while (true)
         {
-            if (planetCount <= 10)
+            if (planetCount == 0)
+            {
+                obj = Instantiate(planets.Find(p => p is Earth).obj, parent.transform, false);
+                obj.transform.localPosition = new Vector3(x[Random.Range(4, 9)], 3f, 0f);
+                planetCount++;
+            }
+            else if (planetCount <= 10)
             {
                 FirstStep();
             }
@@ -79,6 +99,7 @@ public class PlanetGenerator : MonoBehaviour
                     {
                         obj = Instantiate(planet.obj, parent.transform, false);
                         obj.transform.localPosition = new Vector3(x[Random.Range(0, x.Length)], 3f, 0f);
+                        planetCount++;
                     }
                 }
 
@@ -86,6 +107,7 @@ public class PlanetGenerator : MonoBehaviour
                 {
                     obj = Instantiate(planets.Find(p => p is CommonPlanet).obj, parent.transform, false);
                     obj.transform.localPosition = new Vector3(x[Random.Range(0, x.Length)], 3f, 0f);
+                    planetCount++;
                 }
             }
 

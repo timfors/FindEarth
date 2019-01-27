@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Sun : Planet
 {
+    public GameObject burnCreate;
+
+    GameObject fire;
+
     bool death;
 
     public override bool CheckProbability()
@@ -23,6 +27,7 @@ public class Sun : Planet
     IEnumerator DeathTimer()
     {
         float timer = 0f;
+
         while (timer < 3f)
         {
             timer++;
@@ -32,9 +37,9 @@ public class Sun : Planet
         death = true;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "arm")
         {
             StartCoroutine(DeathTimer());
         }
@@ -42,7 +47,17 @@ public class Sun : Planet
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (death && collision.gameObject.tag == "Player")
+        Transform player = GameObject.FindGameObjectWithTag("Player").transform;
+        if (fire == null)
+        {
+            fire = Instantiate(burnCreate, player.transform.position, player.transform.rotation);
+            fire.transform.SetParent(player.transform);
+            fire.transform.localPosition = new Vector3(0, -0.5f, -1.2f);
+            fire.transform.localEulerAngles = new Vector3(0, 0, 180);
+            fire.transform.localScale = new Vector3(0.4f, 0.3f, 0.3f);
+        }
+
+        if (death && collision.gameObject.tag == "Player" || death && collision.gameObject.tag == "arm")
         {
             GameOver.gameOverManager.StartGameOver();
         }
@@ -50,6 +65,8 @@ public class Sun : Planet
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+        Destroy(fire);
+        fire = null;
         StopAllCoroutines();
     }
 }

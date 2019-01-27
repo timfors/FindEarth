@@ -160,5 +160,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 8113880455741728755}
   start: 0
-  speed: 0
+  speed: 45
   probability: 75

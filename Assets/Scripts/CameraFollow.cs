@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
+    public static CameraFollow GetFollow;
+
     public Transform player;
 
     bool follow;
+
+    private void Awake()
+    {
+        GetFollow = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -15,36 +22,32 @@ public class CameraFollow : MonoBehaviour
         StartCoroutine(CheckPlayer());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*if (Vector3.Distance(new Vector3(player.position.x, 0, 0), new Vector3(transform.position.x, 0, 0)) > 4)
-        {
-            transform.position = new Vector3(transform.position.x + (player.position.x > transform.position.x? 0.3f : -0.3f), transform.position.y, transform.position.z);
-        }*/
-    }
-
     IEnumerator CheckPlayer()
     {
         while (true)
         {
-            if (!follow && Vector3.Distance(new Vector3(player.position.x, 0, 0), new Vector3(transform.position.x, 0, 0)) >= 6)
+            if (player == null)
+                yield return null;
+            else
             {
-                if (GlobalConfig.GetGlobalConfig.right)
+                if (!follow && Vector3.Distance(new Vector3(player.position.x, 0, 0), new Vector3(transform.position.x, 0, 0)) >= 6)
                 {
-                    StartCoroutine(ChangeRight());
-                    follow = true;
-                }
-                else if(GlobalConfig.GetGlobalConfig.left)
-                {
-                    StartCoroutine(ChangeLeft());
-                    follow = true;
+                    if (GlobalConfig.GetGlobalConfig.right)
+                    {
+                        StartCoroutine(ChangeRight());
+                        follow = true;
+                    }
+                    else if (GlobalConfig.GetGlobalConfig.left)
+                    {
+                        StartCoroutine(ChangeLeft());
+                        follow = true;
+                    }
+
+                    yield return new WaitForSeconds(1f);
                 }
 
-                yield return new WaitForSeconds(1f);
+                yield return null;
             }
-
-            yield return null;
         }
     }
 
@@ -55,7 +58,7 @@ public class CameraFollow : MonoBehaviour
         while (x > -12.5f)
         {
             transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y, transform.position.z);
-            x -= 0.5f; Debug.Log(x);
+            x -= 0.5f;
             yield return new WaitForSeconds(0.001f);
         }
 

@@ -93,6 +93,7 @@
     <Compile Include="Assets\PlanetGenerator.cs" />
     <Compile Include="Assets\RightCheck.cs" />
     <Compile Include="Assets\Scripts\BlackHole.cs" />
+    <Compile Include="Assets\Scripts\BoomScript.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Collision.cs" />
     <Compile Include="Assets\Scripts\CommonPlanet.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Assets\Scripts\Planet.cs" />
     <Compile Include="Assets\Scripts\PlanetCreator.cs" />
     <Compile Include="Assets\Scripts\PlanetMov.cs" />
+    <Compile Include="Assets\Scripts\PlanetSound.cs" />
     <Compile Include="Assets\Scripts\PlayerControll.cs" />
     <Compile Include="Assets\Scripts\PlayerMov.cs" />
     <Compile Include="Assets\Scripts\Rotation.cs" />

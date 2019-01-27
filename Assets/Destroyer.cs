@@ -7,19 +7,33 @@ public class Destroyer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.position.y < 0)
+        if (GlobalConfig.GetGlobalConfig.start)
         {
-            if (!collision.gameObject.tag.Equals("Player"))
-                Destroy(collision.gameObject);
+            if (collision.transform.position.y < 0)
+            {
+                if (!collision.gameObject.tag.Equals("Player") && !collision.gameObject.tag.Equals("arm"))
+                {
+                    if (collision.gameObject.GetComponent<PlayerControll>() != null)
+                    {
+                        GameOver.gameOverManager.StartGameOver();
+                    }
+                    else
+                    {
+                        Destroy(collision.gameObject);
+                    }
+                }
+                else
+                {
+                    GameOver.gameOverManager.StartGameOver();
+                }
+            }
             else
             {
-
+                if (collision.gameObject.tag.Equals("Player") || collision.gameObject.tag.Equals("arm"))
+                {
+                    GameOver.gameOverManager.StartGameOver();
+                }
             }
-        }
-        else
-        {
-            if (collision.gameObject.tag.Equals("Player"))
-            { }
         }
     }
 }

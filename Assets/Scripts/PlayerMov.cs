@@ -8,7 +8,8 @@ public class PlayerMov : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        movement = new Vector3(0, 1, 0);    
+        movement = new Vector3(0, 1, 0);
+        StartCoroutine(Anim());
     }
 
     // Update is called once per frame
@@ -16,7 +17,20 @@ public class PlayerMov : MonoBehaviour
     {
         if (GlobalConfig.GetGlobalConfig.start)
         {
+            gameObject.GetComponent<Rigidbody2D>().drag -= (0.2f * Time.deltaTime);
             transform.Translate(movement * GlobalConfig.GetGlobalConfig.speed * Time.deltaTime);
         }
+    }
+
+    IEnumerator Anim()
+    {
+        while (!GlobalConfig.GetGlobalConfig.start)
+        {
+            yield return null;
+        }
+
+        GetComponent<Animator>().SetTrigger("jump");
+
+        yield return null;
     }
 }
