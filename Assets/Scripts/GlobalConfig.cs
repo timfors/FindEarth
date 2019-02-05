@@ -44,7 +44,5 @@ public class GlobalConfig : MonoBehaviour
             record = points;
             PlayerPrefs.SetInt("Points", record);
         }
-
-        points = 0;
     }
 }

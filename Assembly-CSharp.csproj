@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Camera\LeftCheck.cs" />
     <Compile Include="Assets\Scripts\Camera\RightCheck.cs" />
     <Compile Include="Assets\Scripts\Camera\SwapField.cs" />
+    <Compile Include="Assets\Scripts\CameraStay.cs" />
     <Compile Include="Assets\Scripts\Collision.cs" />
     <Compile Include="Assets\Scripts\Destroyer.cs" />
     <Compile Include="Assets\Scripts\GlobalConfig.cs" />

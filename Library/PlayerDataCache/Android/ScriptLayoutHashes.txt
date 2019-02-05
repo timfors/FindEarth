@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Unity/FindEarth/persik.apk
+C:/Unity/FindEarth/persikMain.apk
 SceneListBegin?
 Assets/Scenes/SampleScene.unity
 SceneListEnd?
@@ -181,7 +181,6 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 c7524f6d2a9246ca362a31c7bbcec536 Assembly-CSharp.dll:UnityChan.SpringBone
-32af5ba187c76081e754590f33ec84fe Assembly-CSharp.dll:.Rotation
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Anima2D.EditorUpdaterProxy
@@ -194,7 +193,6 @@ e0d860b6c6f12dce6e4b75a84f603e3b Assembly-CSharp.dll:.StartMenu
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.PlanetMov
-7d98b0cdf41195f349c2050ba7cd6d87 Assembly-CSharp.dll:.Moon
 bff72eb8ce705e2c23665a3cec83404f Assembly-CSharp.dll:Anima2D.Pose
 a82597874b9d8940dc44fab13e50ee7b Assembly-CSharp.dll:Anima2D.PoseManager
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
@@ -202,3 +200,4 @@ a82597874b9d8940dc44fab13e50ee7b Assembly-CSharp.dll:Anima2D.PoseManager
 49dcb3939f87870ac10cf1f8fcdfb35e Assembly-CSharp.dll:.Follow
 67141400a9cb8df62ab15452076e9b74 Assembly-CSharp.dll:Anima2D.IkCCD2D
 2e4f9d9daaaa5db973be88adbab84bd8 Assembly-CSharp.dll:.SkinnedMeshCombiner
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.CameraStay

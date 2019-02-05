@@ -6,6 +6,7 @@ TagManager:
   tags:
   - arm
   - legs
+  - Fly
   layers:
   - Default
   - TransparentFX

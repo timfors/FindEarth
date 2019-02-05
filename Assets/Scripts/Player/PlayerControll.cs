@@ -6,6 +6,8 @@ public class PlayerControll : MonoBehaviour
 {
     public GameObject createDust;
 
+    Animator anim;
+
     GameObject dust;
 
     public bool isArm;
@@ -22,6 +24,7 @@ public class PlayerControll : MonoBehaviour
 
     public void GetPlanet(string tag)
     {
+        anim.SetBool("jump", false);
         gameObject.GetComponent<Rigidbody2D>().drag = 100000;
         GetComponent<Animator>().SetTrigger("vomit");
         if (tag == "arm")
@@ -42,6 +45,8 @@ public class PlayerControll : MonoBehaviour
     }
     void Start()
     {
+        fly = GameObject.FindGameObjectWithTag("Fly");
+        anim = gameObject.GetComponent<Animator>();
         movement = gameObject.GetComponent<PlayerMov>();
         oldParent = transform.parent;
         isGrounded = false;
@@ -55,6 +60,7 @@ public class PlayerControll : MonoBehaviour
     {
         if (isGrounded)
         {
+            anim.SetBool("jump", true);
             gameObject.GetComponent<Rigidbody2D>().drag = 1.8f;
             GetComponent<Animator>().SetTrigger("jump");
             transform.parent = oldParent;
@@ -75,5 +81,10 @@ public class PlayerControll : MonoBehaviour
             Destroy(dust);
             dust = null;
         }
+    }
+
+    private void OnDestroy()
+    {
+        GameOver.gameOverManager.StartGameOver();
     }
 }

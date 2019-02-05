@@ -77,7 +77,6 @@ public class StartMenu : MonoBehaviour
         GlobalConfig.GetGlobalConfig.start = true;
         icon.gameObject.SetActive(true);
         points.gameObject.SetActive(true);
-        points.text = "0";
     }
 
     internal void AddCommand(PlayerControll controll)
@@ -101,6 +100,7 @@ public class StartMenu : MonoBehaviour
         gameOverField.transform.localPosition = new Vector3(0f, 0f, 0f);
         gTitle.color = new Color(1f, 1f, 1f, 0f);
         gTap.color = new Color(1f, 1f, 1f, 0f);
+        pointsNow.text = GlobalConfig.GetGlobalConfig.points.ToString();
         StartCoroutine(GameOverWindow());
     }
 
@@ -172,16 +172,17 @@ public class StartMenu : MonoBehaviour
     {
         while (gTitle.color.a < 1f)
         {
-            gTitle.color = new Color(gTitle.color.r, gTitle.color.g, gTitle.color.b, gTitle.color.a + 0.005f);
+            gTitle.color = new Color(gTitle.color.r, gTitle.color.g, gTitle.color.b, gTitle.color.a + 0.01f);
             yield return new WaitForSeconds(0.001f);
         }
 
         pointsNow.text = GlobalConfig.GetGlobalConfig.points.ToString();
+        GlobalConfig.GetGlobalConfig.points = 0;
 
         while (pointsNow.color.a < 1f)
         {
-            pField.color = new Color(pField.color.r, pField.color.g, pField.color.b, pField.color.a + 0.008f);
-            pointsNow.color = new Color(pointsNow.color.r, pointsNow.color.g, pointsNow.color.b, pointsNow.color.a + 0.008f);
+            pField.color = new Color(pField.color.r, pField.color.g, pField.color.b, pField.color.a + 0.03f);
+            pointsNow.color = new Color(pointsNow.color.r, pointsNow.color.g, pointsNow.color.b, pointsNow.color.a + 0.03f);
             yield return new WaitForSeconds(0.001f);
         }
 
@@ -189,14 +190,14 @@ public class StartMenu : MonoBehaviour
 
         while (record.color.a < 1f)
         {
-            rField.color = new Color(rField.color.r, rField.color.g, rField.color.b, rField.color.a + 0.008f);
-            record.color = new Color(record.color.r, record.color.g, record.color.b, record.color.a + 0.008f);
+            rField.color = new Color(rField.color.r, rField.color.g, rField.color.b, rField.color.a + 0.03f);
+            record.color = new Color(record.color.r, record.color.g, record.color.b, record.color.a + 0.03f);
             yield return new WaitForSeconds(0.001f);
         }
 
         while (gTap.color.a < 1f)
         {
-            gTap.color = new Color(gTap.color.r, gTap.color.g, gTap.color.b, gTap.color.a + 0.008f);
+            gTap.color = new Color(gTap.color.r, gTap.color.g, gTap.color.b, gTap.color.a + 0.03f);
             yield return new WaitForSeconds(0.001f);
         }
 
@@ -213,9 +214,9 @@ public class StartMenu : MonoBehaviour
 
         while (mainMenuField.transform.position.x > 0f)
         {
-            mainMenuField.transform.position = new Vector3(mainMenuField.transform.position.x - 0.1f, mainMenuField.transform.position.y, mainMenuField.transform.position.z);
-            gameOverField.transform.position = new Vector3(gameOverField.transform.position.x - 0.1f, gameOverField.transform.position.y, gameOverField.transform.position.z);
-            obj.transform.position = new Vector3(obj.transform.position.x - 0.1f, obj.transform.position.y, obj.transform.position.z);
+            mainMenuField.transform.position = new Vector3(mainMenuField.transform.position.x - 0.3f, mainMenuField.transform.position.y, mainMenuField.transform.position.z);
+            gameOverField.transform.position = new Vector3(gameOverField.transform.position.x - 0.3f, gameOverField.transform.position.y, gameOverField.transform.position.z);
+            obj.transform.position = new Vector3(obj.transform.position.x - 0.3f, obj.transform.position.y, obj.transform.position.z);
 
             yield return new WaitForSeconds(0.001f);
         }

@@ -24,14 +24,7 @@ public class Destroyer : MonoBehaviour
                 }
                 else
                 {
-                    GameOver.gameOverManager.StartGameOver();
-                }
-            }
-            else
-            {
-                if (collision.gameObject.tag.Equals("Player") || collision.gameObject.tag.Equals("arm"))
-                {
-                    GameOver.gameOverManager.StartGameOver();
+                    Destroy(collision.gameObject);
                 }
             }
         }

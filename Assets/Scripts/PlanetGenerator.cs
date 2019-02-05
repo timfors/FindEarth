@@ -75,7 +75,7 @@ public class PlanetGenerator : MonoBehaviour
         {
             if (planetCount == 0)
             {
-                obj = Instantiate(planets.Find(p => p is CommonPlanet).obj, parent.transform, false);
+                obj = Instantiate(planets.Find(p => p is Earth).obj, parent.transform, false);
                 obj.transform.localPosition = new Vector3(x[Random.Range(4, 9)], 3f, 0f);
                 planetCount++;
             }
