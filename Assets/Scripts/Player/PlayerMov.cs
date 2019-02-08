@@ -15,7 +15,7 @@ public class PlayerMov : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GlobalConfig.GetGlobalConfig.start)
+        if (GlobalConfig.GetGlobalConfig.isPlaying)
         {
             gameObject.GetComponent<Rigidbody2D>().drag -= (0.2f * Time.deltaTime);
             transform.Translate(movement * GlobalConfig.GetGlobalConfig.speed * Time.deltaTime);
@@ -24,7 +24,7 @@ public class PlayerMov : MonoBehaviour
 
     IEnumerator Anim()
     {
-        while (!GlobalConfig.GetGlobalConfig.start)
+        while (!GlobalConfig.GetGlobalConfig.isPlaying)
         {
             yield return null;
         }

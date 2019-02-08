@@ -2,21 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlackHole : Planet
+public class BlackHole : MonoBehaviour
 {
-    public override bool CheckProbability()
-    {
-        float p = Random.Range(0f, 1f);
-
-        if (p < probability)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D target)
     {

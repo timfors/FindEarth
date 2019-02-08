@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoomScript : Planet
+public class BoomScript : MonoBehaviour
 {
     public GameObject createExploid;
 
@@ -14,7 +14,6 @@ public class BoomScript : Planet
             exp.transform.localScale = new Vector3(0.2f, 0.3f, 0.1f);
             Destroy(GameObject.FindGameObjectWithTag("Player"));
             Destroy(gameObject);
-            GameOver.gameOverManager.StartGameOver();
         }
     }
 }

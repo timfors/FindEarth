@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4370940940415953719}
   - component: {fileID: 7839065525382022608}
   m_Layer: 0
-  m_Name: GameObject
-  m_TagString: arm
+  m_Name: Collider
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,14 +50,17 @@ EdgeCollider2D:
   - {x: -0.5183193, y: 0.32290933}
   - {x: -0.4799123, y: 0.41892624}
   - {x: -0.4783902, y: 0.4282546}
-  - {x: -0.48954433, y: 0.46638867}
+  - {x: -0.07130509, y: 0.92267895}
+  - {x: -0.30277464, y: 0.87991095}
+  - {x: -0.49870372, y: 0.69995636}
   - {x: -0.48406765, y: 0.43138742}
   - {x: -0.55668086, y: 0.017044544}
-  - {x: -0.33546326, y: -0.191061}
+  - {x: -0.53132397, y: -0.39460275}
   - {x: -0.13420266, y: -0.434185}
   - {x: 0.34468886, y: -0.3729119}
   - {x: 0.42402923, y: 0.17000389}
-  - {x: 0.3483562, y: 0.4109392}
+  - {x: 0.373964, y: 0.78118134}
+  - {x: -0.07296788, y: 0.92385525}
 --- !u!1 &6899037108354031783
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +441,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createDust: {fileID: 2781292448568368394, guid: a23327f0b24c0a04ebf0b568c6bd0b72,
     type: 3}
-  isArm: 0
   isGrounded: 0
   createFly: {fileID: 1104817638861736069, guid: 96c81654202c23d4cbc7958b9c547e58,
     type: 3}
@@ -1382,7 +1384,7 @@ PrefabInstance:
     - target: {fileID: 1104817638861736068, guid: 96c81654202c23d4cbc7958b9c547e58,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.026
+      value: -0.308
       objectReference: {fileID: 0}
     - target: {fileID: 1104817638861736068, guid: 96c81654202c23d4cbc7958b9c547e58,
         type: 3}

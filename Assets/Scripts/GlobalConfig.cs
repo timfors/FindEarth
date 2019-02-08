@@ -10,7 +10,7 @@ public class GlobalConfig : MonoBehaviour
         get { return globalConfig; }
     }
 
-    public bool start;
+    public bool isPlaying;
     public float speed;
     public bool left;
     public bool right;
@@ -20,12 +20,12 @@ public class GlobalConfig : MonoBehaviour
     private void Awake()
     {
         globalConfig = this;
-        start = false;
+        isPlaying = false;
     }
 
     private void Start()
     {
-        if (PlayerPrefs.HasKey("Pints"))
+        if (PlayerPrefs.HasKey("Points"))
         {
             record = PlayerPrefs.GetInt("Points");
         }
@@ -34,7 +34,6 @@ public class GlobalConfig : MonoBehaviour
     public void SetPoints(int points)
     {
         this.points += points;
-        StartMenu.GetMenu.UpdatePoints();
     }
 
     public void SetRecord()

@@ -6,7 +6,7 @@ public class StartPlanetDown : MonoBehaviour
 {
     void Update()
     {
-        if (GlobalConfig.GetGlobalConfig.start)
+        if (GlobalConfig.GetGlobalConfig.isPlaying)
         {
             transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y - (Time.deltaTime * GlobalConfig.GetGlobalConfig.speed), transform.localPosition.z);
 

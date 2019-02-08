@@ -10,15 +10,7 @@ public class PlayerControll : MonoBehaviour
 
     GameObject dust;
 
-    public bool isArm;
-
     public bool isGrounded;
-
-    Transform oldParent;
-
-    public GameObject createFly;
-
-    GameObject fly;
 
     PlayerMov movement;
 
@@ -27,10 +19,6 @@ public class PlayerControll : MonoBehaviour
         anim.SetBool("jump", false);
         gameObject.GetComponent<Rigidbody2D>().drag = 100000;
         GetComponent<Animator>().SetTrigger("vomit");
-        if (tag == "arm")
-        {
-            isArm = true;
-        }
         isGrounded = true;
         movement.enabled = false;
         if (dust == null)
@@ -40,44 +28,42 @@ public class PlayerControll : MonoBehaviour
             dust.transform.localPosition = new Vector3(0, 0.04f, -1);
             dust.transform.localScale = new Vector3(0.3f, 0.3f, 0);
         }
-        Destroy(fly);
-        fly = null;
     }
     void Start()
     {
-        fly = GameObject.FindGameObjectWithTag("Fly");
         anim = gameObject.GetComponent<Animator>();
         movement = gameObject.GetComponent<PlayerMov>();
-        oldParent = transform.parent;
         isGrounded = false;
-        isArm = false;
 
-        StartMenu.GetMenu.AddCommand(this);
-        CameraFollow.GetFollow.player = transform;
     }
 
-    public void OnClick()
+    public void OnClickLeft()
     {
         if (isGrounded)
         {
+            transform.eulerAngles = new Vector3(0, 0, 30);
             anim.SetBool("jump", true);
             gameObject.GetComponent<Rigidbody2D>().drag = 1.8f;
             GetComponent<Animator>().SetTrigger("jump");
-            transform.parent = oldParent;
+            transform.parent = null;
             isGrounded = false;
             movement.enabled = true;
-            if (!isArm)
-            {
-                transform.eulerAngles = new Vector3(0, 0, 180 + transform.eulerAngles.z);
-            }
-            isArm = false;
-            if (fly == null)
-            {
-                fly = Instantiate(createFly, transform.position, transform.rotation);
-                fly.transform.SetParent(transform);
-                fly.transform.localScale = new Vector3(1, 1, 1);
-                fly.transform.localPosition = new Vector3(0, -0.06f, 0);
-            }
+            Destroy(dust);
+            dust = null;
+        }
+    }
+
+    public void OnClickRight()
+    {
+        if (isGrounded)
+        {
+            transform.eulerAngles = new Vector3(0, 0, -30);
+            anim.SetBool("jump", true);
+            gameObject.GetComponent<Rigidbody2D>().drag = 1.8f;
+            GetComponent<Animator>().SetTrigger("jump");
+            transform.parent = null;
+            isGrounded = false;
+            movement.enabled = true;
             Destroy(dust);
             dust = null;
         }
@@ -85,6 +71,5 @@ public class PlayerControll : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameOver.gameOverManager.StartGameOver();
     }
 }
