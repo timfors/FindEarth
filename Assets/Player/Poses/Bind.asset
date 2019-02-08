@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: Bind
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: Bones/Hip
+    localPosition: {x: 2.296034, y: -2.6257272, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.69563586, w: 0.7183946}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/Hip/Torso
+    localPosition: {x: 0.34725413, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.018531945, w: 0.9998283}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/Hip/Torso/Head
+    localPosition: {x: 0.42000008, y: -1.1868906e-10, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.00000008030167, w: 1}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/Hip/Torso/Rarm
+    localPosition: {x: 0.5064489, y: -0.62232214, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.99998885, w: -0.0047247605}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/Hip/Torso/Larm
+    localPosition: {x: 0.5092584, y: 0.6132284, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.9998651, w: -0.016423834}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/Hip/Lleg
+    localPosition: {x: 0.17965648, y: 0.30278412, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.99986345, w: 0.016527455}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/Hip/Lleg/lleg2
+    localPosition: {x: 0.2882299, y: 0.000000029802322, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/Hip/Rleg
+    localPosition: {x: 0.19475596, y: -0.31797215, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.99994147, w: 0.0108212065}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Bones/Hip/Rleg/Rleg2
+    localPosition: {x: 0.2965872, y: 2.3283064e-10, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    localScale: {x: 1, y: 1, z: 1}
