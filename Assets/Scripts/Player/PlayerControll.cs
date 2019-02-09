@@ -14,7 +14,7 @@ public class PlayerControll : MonoBehaviour
 
     PlayerMov movement;
 
-    public void GetPlanet(string tag)
+    public void GetPlanet()
     {
         anim.SetBool("jump", false);
         gameObject.GetComponent<Rigidbody2D>().drag = 100000;
@@ -24,7 +24,7 @@ public class PlayerControll : MonoBehaviour
         if (dust == null)
         {
             dust = Instantiate(createDust, new Vector3(transform.position.x, transform.position.y, -1), transform.rotation);
-            dust.transform.SetParent(transform);
+            dust.transform.SetParent(transform.parent);
             dust.transform.localPosition = new Vector3(0, 0.04f, -1);
             dust.transform.localScale = new Vector3(0.3f, 0.3f, 0);
         }
@@ -71,5 +71,6 @@ public class PlayerControll : MonoBehaviour
 
     private void OnDestroy()
     {
+        GlobalConfig.GetGlobalConfig.isPlaying = false;
     }
 }

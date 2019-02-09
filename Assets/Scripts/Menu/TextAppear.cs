@@ -32,8 +32,8 @@ public class TextAppear : MonoBehaviour
         //Если игра не начата или окончена  , то появляется текст
         else if (!GlobalConfig.GetGlobalConfig.isPlaying && !showed)
         {
-            StartCoroutine(OpacityIncrease());
             showed = true;
+            StartCoroutine(OpacityIncrease());
         }
     }
 
@@ -55,12 +55,13 @@ public class TextAppear : MonoBehaviour
 
     void Disapear()
     {
-        transform.Translate(new Vector3(-1, 0, 0) * Time.deltaTime * disappearSpeed);
+        transform.Translate(new Vector2(-1, 0) * Time.deltaTime * disappearSpeed);
         if (transform.localPosition.x <= -250)
         {
             transform.localPosition = new Vector3(0, transform.localPosition.y, transform.localPosition.z);
             showed = false;
             text.color = new Color(text.color.r, text.color.g, text.color.g, 0);
+            StopAllCoroutines();
         }
     }
 }
