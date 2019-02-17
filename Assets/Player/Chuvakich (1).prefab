@@ -346,8 +346,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6899037108622288112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: -5.73, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: -0.0044696, y: -5.7387, z: 0}
+  m_LocalScale: {x: 0.30767402, y: 0.30767402, z: 0.30767402}
   m_Children:
   - {fileID: 6899037109268579736}
   - {fileID: 6899037108372942775}
@@ -442,8 +442,6 @@ MonoBehaviour:
   createDust: {fileID: 2781292448568368394, guid: a23327f0b24c0a04ebf0b568c6bd0b72,
     type: 3}
   isGrounded: 0
-  createFly: {fileID: 1104817638861736069, guid: 96c81654202c23d4cbc7958b9c547e58,
-    type: 3}
 --- !u!68 &6965605977782361301
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -524,7 +522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.347254
+  m_Length: 0.34725413
   m_ChildTransform: {fileID: 6899037109277634850}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &6899037108697529821
@@ -752,7 +750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.2965872
+  m_Length: 0.29658747
   m_ChildTransform: {fileID: 6899037108697529820}
   m_AttachedIK: {fileID: 6899037110290598386}
 --- !u!1 &6899037109212641012
@@ -847,7 +845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.28822976
+  m_Length: 0.28822947
   m_ChildTransform: {fileID: 6899037109619802663}
   m_AttachedIK: {fileID: 6899037109687784340}
 --- !u!1 &6899037109268579737
@@ -1003,7 +1001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.42000017
+  m_Length: 0.4199998
   m_ChildTransform: {fileID: 6899037108354031782}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &6899037109301660861

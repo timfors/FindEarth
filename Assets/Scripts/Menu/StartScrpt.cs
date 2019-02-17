@@ -27,8 +27,7 @@ public class StartScrpt : MonoBehaviour
         if (GlobalConfig.GetGlobalConfig.isPlaying == false)
         {
             startTime = Time.time;
-            StopAllCoroutines();
         }
-        yield return CheckForDeath();
+        yield return null;
     }
 }
