@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Rotation : MonoBehaviour
 {
-    public int speed;
-    public Vector3 rotate;
+    public float speed;
+
+    public Vector3 movement;
+
+
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(rotate * Time.deltaTime * speed * (Random.Range(1, 2) == 1 ? 1 : -1));
+        transform.Rotate(movement * speed * Time.deltaTime);        
     }
 }
