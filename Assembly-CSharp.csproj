@@ -66,15 +66,13 @@
     <Compile Include="Assets\Scripts\Menu\GetScore.cs" />
     <Compile Include="Assets\Scripts\Menu\StartScrpt.cs" />
     <Compile Include="Assets\Scripts\Menu\TextAppear.cs" />
-    <Compile Include="Assets\Scripts\PlanetMov.cs" />
+    <Compile Include="Assets\Scripts\PlanetData.cs" />
     <Compile Include="Assets\Scripts\Planets\BlackHole.cs" />
     <Compile Include="Assets\Scripts\Planets\BoomScript.cs" />
     <Compile Include="Assets\Scripts\Planets\CollisionCheck.cs" />
     <Compile Include="Assets\Scripts\Planets\StartPlanetDown.cs" />
-    <Compile Include="Assets\Scripts\PlanetSound.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerControll.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMov.cs" />
-    <Compile Include="Assets\Scripts\Rotation.cs" />
     <Compile Include="Assets\Utilities\Anima2D\Examples\Scripts\CharacterMotion.cs" />
     <Compile Include="Assets\Utilities\Anima2D\Examples\Scripts\Follow.cs" />
     <Compile Include="Assets\Utilities\Anima2D\Examples\Scripts\SkinnedMeshCombiner.cs" />
