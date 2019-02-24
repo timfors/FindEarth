@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "Planet" , menuName = "SciptableObjects/Planets")]
-public class Planets : ScriptableObject
+[CreateAssetMenu(fileName = "Planet" , menuName = "SciptableObjects/Planets", order = 51)]
+
+public class PlanetData : ScriptableObject
 {
     [SerializeField]
     private int speed;

@@ -12,8 +12,6 @@ public class GlobalConfig : MonoBehaviour
 
     public bool isPlaying;
     public float speed;
-    public bool left;
-    public bool right;
     public int points;
     public int record;
 
