@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3984326794788299545}
   - component: {fileID: 1312446241}
   - component: {fileID: 1312446239}
-  - component: {fileID: 5987749954770389408}
+  - component: {fileID: 7681345288141836069}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -51,9 +51,9 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.65904075, y: 0.14431633}
+  - {x: 0.66347075, y: 0.17099838}
   - {x: 0.68580055, y: 0.017444223}
-  - {x: 0.66686577, y: -0.1082373}
+  - {x: 0.6735072, y: -0.12828423}
 --- !u!114 &3984326794788299545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472865c8d39152943b7ec61dca50c10a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSpeed: 5
+  normalSpeed: 3
   fastSpeed: 15
 --- !u!50 &1312446241
 Rigidbody2D:
@@ -118,7 +118,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &5987749954770389408
+--- !u!114 &7681345288141836069
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
