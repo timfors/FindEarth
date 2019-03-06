@@ -11,10 +11,14 @@ public class Player : MonoBehaviour
     [SerializeField]
     Button button;
 
+
     public ParticleSystem dust;
 
     private void Awake()
     {
+        //set Player in Camera Follow script
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>().player = transform;
+        //Set Player in Button script
         button = GameObject.FindGameObjectWithTag("GameController").GetComponent<Button>();
         button.onClick.RemoveListener(ButtonClick);
         button.onClick.AddListener(ButtonClick);
