@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 883, y: 498}
   m_MaxSize: {x: 16008, y: 14048}
   vertical: 0
-  controlID: 16756
+  controlID: 220
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 606, y: 498}
   m_MaxSize: {x: 12006, y: 14048}
   vertical: 1
-  controlID: 16709
+  controlID: 308
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 606, y: 224}
   m_MaxSize: {x: 12006, y: 4024}
   vertical: 0
-  controlID: 16846
+  controlID: 309
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 174}
   m_MaxSize: {x: 4002, y: 8024}
   vertical: 1
-  controlID: 16757
+  controlID: 221
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -490,9 +490,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 0c290000
       m_LastClickedID: 0
-      m_ExpandedIDs: fcbffffffebfffff5afbffffd2fbffffd4fbffff742c0000b02c0000
+      m_ExpandedIDs: d4fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -775,20 +775,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Effects
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 68
   m_LastFolders:
-  - Assets/Prefabs/Effects
+  - Assets
   m_LastFoldersGridSize: 68
   m_LastProjectPath: C:\Users\User\Documents\FindEarth
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 243}
-    m_SelectedIDs: b6290000
-    m_LastClickedID: 10678
-    m_ExpandedIDs: 000000008a270000122900006a290000d4290000502a0000702a0000902a00006a2b00008e2b000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 8a270000
+    m_LastClickedID: 10122
+    m_ExpandedIDs: 000000008a270000122900006c290000d6290000522a0000722a0000922a00006c2b0000902b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -816,7 +816,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008a270000122900006a290000d4290000502a0000702a0000902a00006a2b00008e2b000000ca9a3b
+    m_ExpandedIDs: 000000008a270000122900006c290000d6290000522a0000722a0000922a00006c2b0000902b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
