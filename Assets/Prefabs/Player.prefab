@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 1018237824198130089}
   - component: {fileID: 1018237824198130086}
   - component: {fileID: 5679815515412289941}
+  - component: {fileID: 8202986756960304400}
   - component: {fileID: 8316050172964065055}
   - component: {fileID: 2229527935780210669}
   m_Layer: 0
@@ -365,6 +366,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onTapped: {fileID: 11400000, guid: bf7650f5fe35f1540b906e8e8c50b53a, type: 2}
   dust: {fileID: 2810921685225972233}
+--- !u!114 &8202986756960304400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6899037108622288112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1705e412e601a474cb6990c4c842b812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: d15af7c1544ceea4a891d050367df1bd, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5679815515412289941}
+        m_MethodName: ButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &8316050172964065055
 MonoBehaviour:
   m_ObjectHideFlags: 0

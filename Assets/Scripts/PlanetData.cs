@@ -13,6 +13,17 @@ public class PlanetData : ScriptableObject
     [SerializeField]
     private Sprite icon;
 
+    [SerializeField]
+    private int fastSpeed;
+
+
+    public int FastSpeed
+    {
+        get
+        {
+            return fastSpeed;
+        }
+    }
 
     public int Speed
     {

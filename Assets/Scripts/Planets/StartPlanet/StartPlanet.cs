@@ -19,8 +19,11 @@ public class StartPlanet : MonoBehaviour
 
     public void RemovePlanet()
     {
-        StopAllCoroutines();
-        StartCoroutine(Down());
+        if (GlobalConfig.GetGlobalConfig.isReady)
+        {
+            StopAllCoroutines();
+            StartCoroutine(Down());
+        }
     }
 
     
