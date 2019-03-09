@@ -1,16 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     [SerializeField]
     private GameEvent onTapped;
 
+    [SerializeField]
+    Button button;
+
+
     public ParticleSystem dust;
-    private void Start()
+
+    private void Awake()
     {
-        transform.localPosition = new Vector3(0, 0, 0);
+        //set Player in Camera Follow script
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>().player = transform;
+        //Set Player in Button script
+        button = GameObject.FindGameObjectWithTag("GameController").GetComponent<Button>();
+        button.onClick.RemoveListener(ButtonClick);
+        button.onClick.AddListener(ButtonClick);
+    }
+    void OnDestroy()
+    {
+        GlobalConfig.GetGlobalConfig.isPlaying = false;
+        onTapped.Raise();
     }
 
     void TurnOffMovementComponent()
@@ -31,11 +47,11 @@ public class Player : MonoBehaviour
 
     public void ButtonClick()
     {
-        if(GlobalConfig.GetGlobalConfig.isPlaying && transform.parent)
+        if(transform.parent)
         {
             TurnOnMovementComponent();
-            onTapped.Raise();
             transform.parent = null;
+            onTapped.Raise();
         }
     }
 }

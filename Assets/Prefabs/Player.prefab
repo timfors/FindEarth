@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 8316050172964065055}
   - component: {fileID: 2229527935780210669}
   m_Layer: 0
-  m_Name: Chuvakich (1)
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.34725413
+  m_Length: 0.3472546
   m_ChildTransform: {fileID: 6899037109277634850}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &6899037108697529821
@@ -685,7 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.29658723
+  m_Length: 0.2965869
   m_ChildTransform: {fileID: 6899037108697529820}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &6899037109212641012
@@ -780,7 +780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.2882299
+  m_Length: 0.2882301
   m_ChildTransform: {fileID: 6899037109619802663}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &6899037109268579737
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.42000017
+  m_Length: 0.4199997
   m_ChildTransform: {fileID: 6899037108354031782}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &6899037109301660861
@@ -1147,6 +1147,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dust
       objectReference: {fileID: 0}
+    - target: {fileID: 2781292448568368392, guid: a23327f0b24c0a04ebf0b568c6bd0b72,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781292448568368392, guid: a23327f0b24c0a04ebf0b568c6bd0b72,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781292448568368392, guid: a23327f0b24c0a04ebf0b568c6bd0b72,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 2781292448568368393, guid: a23327f0b24c0a04ebf0b568c6bd0b72,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1201,21 +1216,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2781292448568368392, guid: a23327f0b24c0a04ebf0b568c6bd0b72,
-        type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2781292448568368392, guid: a23327f0b24c0a04ebf0b568c6bd0b72,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2781292448568368392, guid: a23327f0b24c0a04ebf0b568c6bd0b72,
-        type: 3}
-      propertyPath: InitialModule.maxNumParticles
-      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2781292448568368395, guid: a23327f0b24c0a04ebf0b568c6bd0b72,
         type: 3}

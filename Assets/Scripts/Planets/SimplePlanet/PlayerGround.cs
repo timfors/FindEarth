@@ -43,7 +43,7 @@ public class PlayerGround : MonoBehaviour
             collision.transform.localEulerAngles = new Vector3(0, 0, 270);
         }
     }
-   
+
     public void StopRotate()
     {
         speed = fastSpeed;
