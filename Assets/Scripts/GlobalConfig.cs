@@ -10,6 +10,7 @@ public class GlobalConfig : MonoBehaviour
         get { return globalConfig; }
     }
 
+    public bool isReady;
     public bool isPlaying;
     public float speed;
     public int points;
@@ -17,6 +18,7 @@ public class GlobalConfig : MonoBehaviour
 
     private void Awake()
     {
+        isReady = false;
         globalConfig = this;
         isPlaying = false;
     }

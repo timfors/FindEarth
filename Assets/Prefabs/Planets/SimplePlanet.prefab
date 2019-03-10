@@ -51,9 +51,9 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.66347075, y: 0.17099838}
+  - {x: 0.6841548, y: 0.09860382}
   - {x: 0.68580055, y: 0.017444223}
-  - {x: 0.6735072, y: -0.12828423}
+  - {x: 0.68126357, y: -0.092086956}
 --- !u!114 &3984326794788299545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,8 +66,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472865c8d39152943b7ec61dca50c10a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSpeed: 3
-  fastSpeed: 15
+  normalSpeed: 4
+  fastSpeed: 20
 --- !u!50 &1312446241
 Rigidbody2D:
   serializedVersion: 4
@@ -159,6 +159,7 @@ GameObject:
   - component: {fileID: 2871514397190149101}
   - component: {fileID: 1195365181047016891}
   - component: {fileID: 7287225209408008117}
+  - component: {fileID: 8361834054698518683}
   m_Layer: 0
   m_Name: SimplePlanet
   m_TagString: Untagged
@@ -233,6 +234,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetData: {fileID: 11400000, guid: f198cf6c18fdc554f92bfc0e36fc8f2e, type: 2}
   onCollided: {fileID: 11400000, guid: 7735af7263a1c2c49b20c56e6278fd36, type: 2}
+--- !u!114 &8361834054698518683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8113880455741728755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1705e412e601a474cb6990c4c842b812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: bf7650f5fe35f1540b906e8e8c50b53a, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7287225209408008117}
+        m_MethodName: SetHighSpeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &8906291802986961737
 GameObject:
   m_ObjectHideFlags: 0

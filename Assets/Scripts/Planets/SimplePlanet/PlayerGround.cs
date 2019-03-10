@@ -36,7 +36,7 @@ public class PlayerGround : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && GlobalConfig.GetGlobalConfig.isPlaying)
         {
             speed = normalSpeed;
             collision.transform.parent = gameObject.transform;

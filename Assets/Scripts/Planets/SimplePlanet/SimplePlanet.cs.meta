@@ -3,7 +3,9 @@ guid: 313ca94717f8c6441b2ef64e0df06124
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - planetData: {fileID: 11400000, guid: f198cf6c18fdc554f92bfc0e36fc8f2e, type: 2}
+  - onCollided: {fileID: 11400000, guid: 7735af7263a1c2c49b20c56e6278fd36, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

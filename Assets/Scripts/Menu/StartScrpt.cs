@@ -9,14 +9,27 @@ public class StartScrpt : MonoBehaviour
     void Start()
     {
         startTime = Time.time;
+        StartCoroutine(ReadyCheck());
     }
     void Awake()
     {
         startTime = Time.time;
     }
+    IEnumerator ReadyCheck()
+    {
+        while (true)
+        {
+            if (Time.time - startTime > 1.4f)
+            {
+                GlobalConfig.GetGlobalConfig.isReady = true;
+                break;
+            }
+            yield return null;
+        }
+    }
     public void OnClick()
     {
-        if (Time.time - startTime > 1 && !GlobalConfig.GetGlobalConfig.isPlaying)
+        if (GlobalConfig.GetGlobalConfig.isReady)
         {
             GlobalConfig.GetGlobalConfig.isPlaying = true;
             StartCoroutine(CheckForDeath());
@@ -24,10 +37,16 @@ public class StartScrpt : MonoBehaviour
     }
     IEnumerator CheckForDeath()
     {
-        if (GlobalConfig.GetGlobalConfig.isPlaying == false)
+        while (true)
         {
-            startTime = Time.time;
+            if (GlobalConfig.GetGlobalConfig.isPlaying == false)
+            {
+                startTime = Time.time;
+                StartCoroutine(ReadyCheck());
+                break;
+                
+            }
+            yield return null;
         }
-        yield return null;
     }
 }
