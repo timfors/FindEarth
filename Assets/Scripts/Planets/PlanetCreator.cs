@@ -11,7 +11,7 @@ public class PlanetCreator : MonoBehaviour
     {
         GameObject planet = allPlanetTypes[Random.Range(0, allPlanetTypes.Length - 1)];
         //create planet and set parent as field
-        Instantiate(planet, transform.position + new Vector3( Random.Range(-0.5f, 0),Random.Range(-5,5), 0), Quaternion.identity).transform.parent = transform.parent;
+        Instantiate(planet, transform.position + new Vector3( Random.Range(-0.5f, 0),Random.Range(-5, 1), 0), Quaternion.identity).transform.parent = transform.parent;
     }
 
     IEnumerator Creator()

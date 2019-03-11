@@ -28,7 +28,7 @@ public class PlayerGround : MonoBehaviour
 
     IEnumerator Rotating()
     {
-        yield return null;
+        yield return new WaitForFixedUpdate();
         gameObject.transform.Rotate(new Vector3(0, 0, -1) * speed);
         SearchingForPlayer();
     }

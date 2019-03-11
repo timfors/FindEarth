@@ -42,8 +42,8 @@ public class SimplePlanet : MonoBehaviour
     {
         while (true)
         {
+            yield return new WaitForFixedUpdate();
             transform.Translate(new Vector3(0, -1, 0) * Time.deltaTime * speed);
-            yield return null;
         }
     }
 
